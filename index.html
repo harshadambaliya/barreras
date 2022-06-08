@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Css File Link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+    <!-- Header Start -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class=" header-content">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Buy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Rent</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="navbar-brand header-logo pt-0 pb-0" href="#">
+                        <img src="assets/images/logo.png" alt="" class="img-fluid">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="choose-location-content ms-auto">
+                        <a href="#" class="choose-location-link">
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <span>Choose Location</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+
+
+    <!-- Landing Section Start -->
+    <section class="landing-section">
+        <div class="landing-content">
+            <div class="landing-video-content">
+                <video autoplay muted loop playsinline preload="metadata" src="assets/images/Abama Resort.mp4" poster="assets/images/landing.png" width="100%" class="landing-video"></video>
+                <!-- <img src="assets/images/video_play.png" alt="" class="img-fluid landing-video-icon"> -->
+            </div>
+            <div class="landing-tbas-content">
+                <div class="container">
+                    <div class="landing-serach">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active ps-0" id="buy-tab" data-bs-toggle="tab" data-bs-target="#buy" type="button" role="tab" aria-controls="buy" aria-selected="true">BUY</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="sell-tab" data-bs-toggle="tab" data-bs-target="#sell" type="button" role="tab" aria-controls="sell" aria-selected="false">SELL</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="rent-tab" data-bs-toggle="tab" data-bs-target="#rent" type="button" role="tab" aria-controls="rent" aria-selected="false">RENT</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="buy" role="tabpanel" aria-labelledby="buy-tab">
+                                <div class="landing-tab">
+                                    <div class="landing-tab-serachbox position-relative">
+                                        <input type="text" class="form-control" placeholder="Search by address, city, Landmark">
+                                        <div class="landing-serach-img">
+                                            <a href="#" class="btn landing-serach-btn"><img src="assets/images/serach.png" alt="" class="img-fluid"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="sell" role="tabpanel" aria-labelledby="sell-tab">
+                                <div class="landing-tab">
+                                    <div class="landing-tab-serachbox position-relative">
+                                        <input type="text" class="form-control" placeholder="Search by address, city, Landmark">
+                                        <div class="landing-serach-img">
+                                            <a href="#" class="btn landing-serach-btn"><img src="assets/images/serach.png" alt="" class="img-fluid"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="rent" role="tabpanel" aria-labelledby="rent-tab">
+                                <div class="landing-tab">
+                                    <div class="landing-tab-serachbox position-relative">
+                                        <input type="text" class="form-control" placeholder="Search by address, city, Landmark">
+                                        <div class="landing-serach-img">
+                                            <a href="#" class="btn landing-serach-btn"><img src="assets/images/serach.png" alt="" class="img-fluid"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Landing Section End -->
+
+    <!-- Buy Property Section Start -->
+    <section class="p-buy-section">
+        <div class="container">
+            <h2 class="p-buy-title text-center section-main-title">Welcome To The Land Of The Eternal Spring</h2>
+            <div class="p-buy-content">
+                <div class="p-buy-details shadow">
+                    <h2 class="p-buy-details-title section-title">
+                        Buy your property with us
+                    </h2>
+                    <p class="p-buy-details-discription section-discription">Buying a home is a big step and there can be a lot to consider. At Inmobiliaria Barreras we believe it should be one of the most fulfilling experiences of your life.</p>
+                    <a href="#" class="btn btn-dark p-buy-btn">Buy Now</a>
+                </div>
+                <div class="p-buy-video-content">
+                    <img src="assets/images/buy.png" alt="" class="img-fluid">
+                    <!-- <video autoplay muted loop playsinline preload="metadata" src="assets/images/landing-v.mp4" poster="assets/images/buy.png" width="100%" height="100%" class="landing-video p-buy-video"></video> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Buy Property Section End -->
+
+    <!-- Sell Property Section Start -->
+    <section class="p-sell-section">
+        <div class="container">
+            <div class="p-buy-content p-sell-content">
+                <div class="p-buy-details  p-sell-details shadow">
+                    <h2 class="p-buy-details-title section-title">
+                        Sell your property with us
+                    </h2>
+                    <p class="p-buy-details-discription section-discription">
+                        Whether you're selling for the first time or have sold up and moved on before, we want to make sure that you’re well informed and know exactly what to expect every step of the way.
+                    </p>
+                    <a href="#" class="btn btn-dark p-buy-btn">Sell Now</a>
+                </div>
+                <div class="p-buy-video-content p-sell-video-content">
+                    <img src="assets/images/sell.png" alt="" class="img-fluid">
+                    <!-- <video autoplay muted loop playsinline preload="metadata" src=" assets/images/sell.mov " poster=" assets/images/sell.png " width=" 100% " height=" 100% " class=" landing-video p-buy-video "></video> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sell Property Section End -->
+
+    <!-- Rent Property Section Start -->
+    <section class=" p-rent-section p-sell-section ">
+        <div class=" container ">
+            <div class=" p-buy-content p-rent-content ">
+                <div class=" p-buy-details shadow ">
+                    <h2 class=" p-buy-details-title section-title ">
+                        Rent your property with us
+                    </h2>
+                    <p class=" p-buy-details-discription section-discription ">Whether you are looking to rent your first home, or seeking a property management service, we will help you understand the process, and get all the facts!</p>
+                    <a href=" # " class=" btn btn-dark p-buy-btn p-rent-btn">Buy on Rent Now</a>
+                </div>
+                <div class=" p-buy-video-content ">
+                    <img src="assets/images/rent.png" alt="" class="img-fluid">
+                    <!-- <video autoplay muted loop playsinline preload="metadata" src=" assets/images/rent.mov " poster=" assets/images/rent.png " width=" 100% " height=" 100% " class=" landing-video p-buy-video "></video> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Rent Property Section End -->
+
+    <!-- Rent Property Slider Start -->
+    <section class=" rent-slider-section ">
+        <div class=" container ">
+            <div class=" rent-slider-content ">
+                <h2 class="rent-slider-title text-center section-main-title ">THE LAND OF THE ETERNAL SPRING
+                </h2>
+                <div class="rent-slider-list">
+                    <div class="rent-slider-item ">
+                        <div class=" rent-slider-img ">
+                            <img src="assets/images/rent_3.png " alt=" " class="img-fluid">
+                            <div class="rent-slider-img-two shadow">
+                                <img src="assets/images/rent_4.png " alt=" " class="img-fluid">
+                            </div>
+                            <div class="rent-slider-details bg-white ">
+                                <h2 class="rent-slider-details-title section-title">RENT</h2>
+                                <p class="rent-slider-details-discription section-discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minima dignissimos iusto doloribus est aliquid eaque officia tempore, ipsum dolorem, fuga in provident consectetur dicta nam nobis. Repellendus, est vitae?</p>
+                                <a href="#" class="btn btn-dark ">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rent-slider-item ">
+                        <div class=" rent-slider-img ">
+                            <img src="assets/images/rent_3.png " alt=" " class="img-fluid">
+                            <div class="rent-slider-img-two shadow">
+                                <img src="assets/images/rent_4.png " alt=" " class="img-fluid">
+                            </div>
+                            <div class="rent-slider-details bg-white ">
+                                <h2 class="rent-slider-details-title section-title">RENT</h2>
+                                <p class="rent-slider-details-discription section-discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minima dignissimos iusto doloribus est aliquid eaque officia tempore, ipsum dolorem, fuga in provident consectetur dicta nam nobis. Repellendus, est vitae?</p>
+                                <a href="#" class="btn btn-dark ">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rent-slider-item ">
+                        <div class=" rent-slider-img ">
+                            <img src="assets/images/rent_3.png " alt=" " class="img-fluid">
+                            <div class="rent-slider-img-two shadow">
+                                <img src="assets/images/rent_4.png " alt=" " class="img-fluid">
+                            </div>
+                            <div class="rent-slider-details bg-white ">
+                                <h2 class="rent-slider-details-title section-title">RENT</h2>
+                                <p class="rent-slider-details-discription section-discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minima dignissimos iusto doloribus est aliquid eaque officia tempore, ipsum dolorem, fuga in provident consectetur dicta nam nobis. Repellendus, est vitae?</p>
+                                <a href="#" class="btn btn-dark ">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rent-slider-item ">
+                        <div class=" rent-slider-img ">
+                            <img src="assets/images/rent_3.png " alt=" " class="img-fluid">
+                            <div class="rent-slider-img-two shadow">
+                                <img src="assets/images/rent_4.png " alt=" " class="img-fluid">
+                            </div>
+                            <div class="rent-slider-details bg-white ">
+                                <h2 class="rent-slider-details-title section-title">RENT</h2>
+                                <p class="rent-slider-details-discription section-discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minima dignissimos iusto doloribus est aliquid eaque officia tempore, ipsum dolorem, fuga in provident consectetur dicta nam nobis. Repellendus, est vitae?</p>
+                                <a href="#" class="btn btn-dark ">View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Rent Property Slider End -->
+
+
+    <!-- Partnerships Section Start -->
+    <section class="partnership-section">
+        <div class="container">
+            <div class="partnership-content">
+                <h2 class="partnership-title section-main-title text-center">Partnerships</h2>
+                <div class="row">
+
+                    <div class="col col-12 col-md-4">
+                        <div class="partnership-item text-center">
+                            <div class="partnership-img">
+                                <img src="assets/images/tyco.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-4">
+                        <div class="partnership-item text-center">
+                            <div class="partnership-img">
+                                <img src="assets/images/caser.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-4">
+                        <div class="partnership-item text-center">
+                            <div class="partnership-img">
+                                <img src="assets/images/iberdrola.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Partnerships Section End -->
+
+
+    <!-- Lorenzo Section Start -->
+    <section class="lorenzo-section">
+        <div class="container">
+            <div class="lorenzo-content">
+                <h2 class="rent-slider-title text-center section-main-title lorenzo-title">Customer Testimonials
+                </h2>
+                <h4 class="lorenzo-subtitle text-center section-discription">What our customers say about us.
+                </h4>
+                <div class="rent-slider-list lorenzo-list">
+
+                    <div class="rent-slider-item lorenzo-item">
+                        <div class=" rent-slider-img  lorenzo-img">
+                            <img src="assets/images/gara.png " alt=" " class="img-fluid">
+                            <div class="rent-slider-details bg-white lorenzo-details">
+                                <h2 class="rent-slider-details-title lorenzo-details-title section-title">Gara Lorenzo Martin
+                                </h2>
+                                <p class="rent-slider-details-discription section-discription mb-0 lorenzo-discription">
+                                    Muy buena atención y profesionalidad por parte de Marina. Nos ha guiado y nos ha ayudado en todo el proceso de compraventa de la vivienda. Ahora somos propietarios y aún estamos en contacto. Recomendados 100%.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rent-slider-item lorenzo-item">
+                        <div class=" rent-slider-img  lorenzo-img">
+                            <img src="assets/images/gara.png " alt=" " class="img-fluid">
+                            <div class="rent-slider-details bg-white lorenzo-details">
+                                <h2 class="rent-slider-details-title lorenzo-details-title section-title">Gara Lorenzo Martin
+                                </h2>
+                                <p class="rent-slider-details-discription section-discription mb-0 lorenzo-discription">
+                                    Muy buena atención y profesionalidad por parte de Marina. Nos ha guiado y nos ha ayudado en todo el proceso de compraventa de la vivienda. Ahora somos propietarios y aún estamos en contacto. Recomendados 100%.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rent-slider-item lorenzo-item">
+                        <div class=" rent-slider-img  lorenzo-img">
+                            <img src="assets/images/gara.png " alt=" " class="img-fluid">
+                            <div class="rent-slider-details bg-white lorenzo-details">
+                                <h2 class="rent-slider-details-title lorenzo-details-title section-title">Gara Lorenzo Martin
+                                </h2>
+                                <p class="rent-slider-details-discription section-discription mb-0 lorenzo-discription">
+                                    Muy buena atención y profesionalidad por parte de Marina. Nos ha guiado y nos ha ayudado en todo el proceso de compraventa de la vivienda. Ahora somos propietarios y aún estamos en contacto. Recomendados 100%.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rent-slider-item lorenzo-item">
+                        <div class=" rent-slider-img  lorenzo-img">
+                            <img src="assets/images/gara.png " alt=" " class="img-fluid">
+                            <div class="rent-slider-details bg-white lorenzo-details">
+                                <h2 class="rent-slider-details-title lorenzo-details-title section-title">Gara Lorenzo Martin
+                                </h2>
+                                <p class="rent-slider-details-discription section-discription mb-0 lorenzo-discription">
+                                    Muy buena atención y profesionalidad por parte de Marina. Nos ha guiado y nos ha ayudado en todo el proceso de compraventa de la vivienda. Ahora somos propietarios y aún estamos en contacto. Recomendados 100%.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Lorenzo Section End -->
+
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#"> <img src="assets/images/logo.png" alt="" class="img-fluid"></a>
+                </div>
+                <div class="footer-contact">
+                    <a href="#" class="text-decoration-none">
+                        <h4 class="footer-location section-discription text-white">
+                            <img src="assets/images/location.png" alt="" class="img-fluid"> Av. Los Abrigos, 32. Los Abrigos. Santa <br> Cruz de Tenerife. 38618</h4>
+                    </a>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-insta text-decoration-none">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer-social-facebook text-decoration-none">
+                            <i class="fa-brands fa-facebook-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <h5 class="section-discription text-center text-white">© 2022 - All rights reserved</h5>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+
+
+
+
+
+    <!-- Js File Link -->
+    <script src=" assets/js/jquery-3.6.0.min.js "></script>
+    <script src=" assets/js/bootstrap.bundle.min.js "></script>
+    <script src=" assets/js/slick.min.js "></script>
+    <script src=" assets/js/custom.js "></script>
+</body>
+
+</html>
