@@ -100,11 +100,21 @@
 
 .header {
     background-color: rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: fixed;
     z-index: 100;
     backdrop-filter: blur(10px);
     top: 0;
     left: 0;
+    width: 100%;
+    transition: all ease-in-out 0.3s;
+}
+
+.header.nav-up {
+    top: -100px;
+}
+
+.header.nav-down {
+    background-color: #202020;
 }
 
 .nav-link {
@@ -183,7 +193,7 @@
 /***************** Landing Section Start ***************/
 
 .landing-section {
-    margin-top: -100px;
+    /* margin-top: -100px; */
     position: relative;
     z-index: 1;
 }
@@ -610,6 +620,10 @@
 .p-sell-details {
     background-color: #FAFAFA;
     padding: 135px 50px 145px 50px;
+}
+
+.p-rent-section {
+    margin-bottom: 230px;
 }
 
 
@@ -1215,6 +1229,7 @@
         margin: auto;
         height: 730px;
         object-fit: cover;
+        margin-right: -50px;
     }
     .partnership-item {
         padding: 35px 60px;
@@ -1242,6 +1257,9 @@
     .header-logo img {
         width: 170px;
     }
+    .p-rent-section {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 1199px) {
@@ -1258,11 +1276,25 @@
         width: 100%;
     }
     .navbar-nav {
+        position: relative;
         height: 100vh;
         align-items: center;
         justify-content: center;
         background-color: rgba(0, 0, 0, 1);
         backdrop-filter: blur(20px);
+        background-image: url(../images/menu-back.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .navbar-nav:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(32, 32, 32, 0.7);
+        z-index: -1;
     }
     .navbar-toggler-icons {
         transition: all ease-in-out 03.s;
@@ -1512,6 +1544,11 @@
     .related-properties-content {
         padding: 50px 0 0;
     }
+    .landing-video-content .landing-video {
+        width: 100%;
+        object-fit: cover;
+        height: 100vh;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1648,11 +1685,6 @@
     .lorenzo-section {
         padding: 50px 0;
     }
-    .landing-video-content .landing-video {
-        width: 100%;
-        object-fit: cover;
-        height: 100vh;
-    }
     .partnership-section {
         padding: 50px 0;
     }
@@ -1691,6 +1723,24 @@
     }
     .florence-section {
         padding-bottom: 0;
+    }
+    .rent-slider-section .rent-slider-item {
+        margin: 0;
+    }
+    .rent-slider-section .rent-slider-img>img {
+        width: 100%;
+    }
+    .rent-slider-section .rent-slider-img-two {
+        left: 50%;
+        width: 90%;
+        transform: translateX(-50%);
+    }
+    .rent-slider-section .rent-slider-details.bg-white {
+        position: relative;
+        margin-top: -17px;
+        z-index: 1;
+        width: 90%;
+        margin: -15px auto 0;
     }
 }
 

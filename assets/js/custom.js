@@ -1,16 +1,16 @@
 //===================// Loader Start //=================== //
-    $(window).on('load', function(){
-        $('body').addClass('site-loaded');
-    });
+$(window).on('load', function() {
+    $('body').addClass('site-loaded');
+});
 //===================// Loader End //=================== //
 $(document).ready(function() {
 
 
     //===================// Menu Open Start //=================== //
-    $('.navbar-toggler').on('click', function(){
+    $('.navbar-toggler').on('click', function() {
         $('body').toggleClass('menu-open');
     });
-    $('.nav-link').on('click', function(){
+    $('.nav-link').on('click', function() {
         $('.navbar-collapse').collapse('hide');
     });
     //===================// Menu Open End //=================== //
@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 
     //================// Rent Slider Start //=======================//
-    setTimeout(function(){
+    setTimeout(function() {
         $('.rent-slider-list').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -96,7 +96,7 @@ $(document).ready(function() {
     });
 
     //================// Property Detail Slider End //=======================//
-    if ($('.form-select').length > 0   ) {
+    if ($('.form-select').length > 0) {
         var $disabledResults = $(".form-select");
         $disabledResults.select2();
         $('select').select2({
@@ -118,5 +118,50 @@ $(document).ready(function() {
         $sliderValue = $(this).val();
         $sliderCounter.html($sliderValue)
     });
+
+    //================// Property Detail Slider Start //=======================//
+    // Hide Header on on scroll down
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('header').outerHeight();
+
+    $(window).scroll(function(event) {
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+
+        // Make sure they scroll more than delta
+        if (Math.abs(lastScrollTop - st) <= delta)
+            return;
+
+        // If they scrolled down and are past the navbar, add class .nav-up.
+        // This is necessary so you never see what is "behind" the navbar.
+        if (st > lastScrollTop && st > navbarHeight) {
+            // Scroll Down
+            $('header').removeClass('nav-down').addClass('nav-up');
+        } else {
+            // Scroll Up
+            if (st + $(window).height() < $(document).height()) {
+                $('header').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+
+        if (st == 0) {
+            $('header').removeClass('nav-down');
+        }
+
+        lastScrollTop = st;
+    }
+    //================// Property Detail Slider End //=======================//
 
 });
