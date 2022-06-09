@@ -1,4 +1,19 @@
+//===================// Loader Start //=================== //
+    $(window).on('load', function(){
+        $('body').addClass('site-loaded');
+    });
+//===================// Loader End //=================== //
 $(document).ready(function() {
+
+
+    //===================// Menu Open Start //=================== //
+    $('.navbar-toggler').on('click', function(){
+        $('body').toggleClass('menu-open');
+    });
+    $('.nav-link').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
+    //===================// Menu Open End //=================== //
 
     //===================// Video Play Start //=================== //
 
@@ -18,34 +33,36 @@ $(document).ready(function() {
 
 
     //================// Rent Slider Start //=======================//
-    $('.rent-slider-list').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        arrows: true,
-        dots: true,
-        speed: 1000,
-        // autoplay: true,
-        autoplaySpeed: 2000,
-        responsive: [{
-                breakpoint: 991,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                }
-            },
-        ]
-    });
+    setTimeout(function(){
+        $('.rent-slider-list').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: true,
+            dots: true,
+            speed: 1000,
+            // autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [{
+                    breakpoint: 991,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                    }
+                },
+            ]
+        });
+    }, 2000);
     //================// Rent Slider End //=======================//
 
     //================// Property Detail Slider Start //=======================//
@@ -79,18 +96,13 @@ $(document).ready(function() {
     });
 
     //================// Property Detail Slider End //=======================//
-    var $disabledResults = $(".form-select");
-    $disabledResults.select2();
-    $('select').select2({
-        minimumResultsForSearch: -1
-    });
-
-
-
-
-
-
-
+    if ($('.form-select').length > 0   ) {
+        var $disabledResults = $(".form-select");
+        $disabledResults.select2();
+        $('select').select2({
+            minimumResultsForSearch: -1
+        });
+    }
 
     var $sliderValue = $(".range-slider[type=range]").val(),
         $sliderCounterContainer = $(".slider-counter-container"),

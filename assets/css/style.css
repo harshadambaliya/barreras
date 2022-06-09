@@ -71,13 +71,35 @@
     transition: 0.5s;
 }
 
+.menu-open {
+    overflow: hidden;
+}
+
+.br-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    z-index: 200;
+}
+
+.site-loaded .br-loader {
+    display: none;
+}
+
 
 /************ Common Class End ******************/
 
 
 /************** Header Start **************/
+
 .header {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     position: sticky;
     z-index: 100;
     backdrop-filter: blur(10px);
@@ -135,6 +157,7 @@
 .choose-location-link span:first-child {
     margin-right: 10px;
 }
+
 .navbar-toggler-icons {
     width: 35px;
     height: 3px;
@@ -142,6 +165,7 @@
     background-color: #fff;
     margin-bottom: 5px;
 }
+
 .navbar-toggler {
     order: 4;
     position: relative;
@@ -151,6 +175,8 @@
 .navbar-toggler-icons:last-child {
     margin-bottom: 0;
 }
+
+
 /************** Header End **************/
 
 
@@ -410,83 +436,8 @@
 
 /* reference: https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
 
-@mixin slider-track {
-    width: $trackWidth;
-    height: $trackHeight;
-    background: $trackColor;
-    border-radius: 100px;
-    cursor: pointer;
-}
-
-@mixin slider-thumb {
-    width: $thumbWidth;
-    height: $thumbWidth;
-    background: $thumbColor;
-    margin-top: -5px;
-    border-radius: 100%;
-    -webkit-appearance: none;
-    cursor: pointer;
-}
-
-// container
 .range-slider-container {
     max-width: 300px;
-}
-
-// generic
-input[type=range] {
-    width: 100%;
-    -webkit-appearance: none;
-}
-
-input[type=range]:focus {
-    outline: none;
-}
-
-// Webkit
-input[type=range]::-webkit-slider-runnable-track {
-    @include slider-track;
-}
-
-input[type=range]::-webkit-slider-thumb {
-    @include slider-thumb;
-}
-
-// Firefox
-input[type=range]::-moz-range-track {
-    @include slider-track;
-    width: 100%;
-}
-
-input[type=range]::-moz-range-thumb {
-    @include slider-thumb;
-}
-
-// IE - quick fix
-input[type=range]::-ms-track {
-    width: 100%;
-    height: 8.4px;
-    cursor: pointer;
-    animate: 0.2s;
-    background: transparent;
-    border-color: transparent;
-    border-width: 16px 0;
-    color: transparent;
-}
-
-input[type=range]::-ms-fill-lower {
-    @include slider-track;
-    width: 100%;
-}
-
-input[type=range]::-ms-fill-upper {
-    @include slider-track;
-    width: 100%;
-}
-
-input[type=range]::-ms-thumb {
-    @include slider-thumb;
-    margin-top: -2.5px;
 }
 
 
@@ -967,7 +918,7 @@ input[type=range]::-ms-thumb {
 /*********** Property Detail Page End **************/
 
 
-/*********** About Page End **************/
+/*********** About Page Start **************/
 
 .about-landing-section {
     background-image: url(../images/about-landing-back.png);
@@ -1071,6 +1022,74 @@ input[type=range]::-ms-thumb {
 .our-team-member-number:hover {
     color: #fff;
     opacity: 0.8;
+}
+
+.why-barreras-about-us-title {
+    font-size: 40px;
+    font-family: 'Cormorant', serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.about-us-section .row {
+    align-items: center;
+}
+
+.about-us-section .why-barreras-content {
+    width: calc(100% - 50px);
+}
+
+.about-us-section .why-barreras-content .why-barreras-content-discription {
+    margin-bottom: 0;
+}
+
+.about-us-section-item:not(:last-child) {
+    margin-bottom: 100px;
+}
+
+.information-img .why-barreras-img {
+    width: 100%;
+}
+
+.information-content-title {
+    font-size: 40px;
+    font-family: 'Cormorant', serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.information-content-description {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.information-item {
+    margin-bottom: 90px;
+}
+
+.information-content {
+    padding: 50px;
+    background-color: #FAFAFA;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+}
+
+.information-item .row {
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.information-content-col {
+    margin-left: -8.33%;
+    position: relative;
+    z-index: 10;
+}
+
+.information-item:nth-child(even) .information-content-col {
+    margin-left: 0;
+}
+
+.information-item:nth-child(even) .information-img-col {
+    margin-left: -8.33%;
 }
 
 
@@ -1192,7 +1211,7 @@ input[type=range]::-ms-thumb {
         padding: 60px 0;
     }
     .rent-slider-img>img {
-        width: 80%;
+        /* width: 80%; */
         margin: auto;
         height: 730px;
         object-fit: cover;
@@ -1203,6 +1222,7 @@ input[type=range]::-ms-thumb {
     .lorenzo-section .rent-slider-img>img {
         height: auto;
         width: 80%;
+        margin-left: 0;
     }
     .footer {
         padding: 30px 0;
@@ -1241,7 +1261,7 @@ input[type=range]::-ms-thumb {
         height: 100vh;
         align-items: center;
         justify-content: center;
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0, 0, 0, 1);
         backdrop-filter: blur(20px);
     }
     .navbar-toggler-icons {
@@ -1285,6 +1305,7 @@ input[type=range]::-ms-thumb {
     }
     .rent-slider-img>img {
         height: 500px;
+        margin-right: -50px;
     }
     .rent-slider-details {
         padding: 30px;
@@ -1379,6 +1400,9 @@ input[type=range]::-ms-thumb {
     .property-detail-slider-section .rent-slider-img-two img {
         height: 100%;
     }
+    .rent-slider-img-two {
+        left: -50px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -1402,6 +1426,7 @@ input[type=range]::-ms-thumb {
     .rent-slider-img>img {
         width: 100%;
         height: 400px;
+        margin-right: -20px;
     }
     .rent-slider-details {
         padding: 20px;
@@ -1497,13 +1522,13 @@ input[type=range]::-ms-thumb {
         font-size: 20px;
     }
     .landing-tbas-content {
-        position: static;
-        transform: unset;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 100%;
-        margin: 30px auto 0;
     }
     .landing-serach {
-        background-color: rgba(0, 0, 0, 0.2);
         padding: 15px;
     }
     .nav-tabs .nav-link {
@@ -1515,8 +1540,7 @@ input[type=range]::-ms-thumb {
         margin-bottom: 15px;
     }
     .landing-serach-img {
-        position: static;
-        margin-top: 10px;
+        display: none;
     }
     .landing-serach-btn {
         display: block;
@@ -1557,9 +1581,17 @@ input[type=range]::-ms-thumb {
         padding: 0;
     }
     .rent-slider-details {
-        position: static;
+        position: relative;
         width: 100%;
         transform: unset;
+        margin-top: -100px;
+        z-index: 111;
+        right: unset;
+    }
+    .lorenzo-content .rent-slider-details {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
     .rent-slider-img-two {
         left: -20px;
@@ -1587,6 +1619,9 @@ input[type=range]::-ms-thumb {
     .section-title {
         font-size: 28px;
         line-height: 30px;
+        /* padding: 150px 0 70px; */
+    }
+    .properties-title {
         padding: 150px 0 70px;
     }
     .rent-slider-details-title {
@@ -1614,9 +1649,9 @@ input[type=range]::-ms-thumb {
         padding: 50px 0;
     }
     .landing-video-content .landing-video {
-        height: 300px;
         width: 100%;
         object-fit: cover;
+        height: 100vh;
     }
     .partnership-section {
         padding: 50px 0;
@@ -1636,6 +1671,26 @@ input[type=range]::-ms-thumb {
         width: 90%;
         margin: -50px auto 0;
         right: unset;
+    }
+    .p-buy-video-content>img {
+        height: 300px;
+    }
+    .p-buy-content {
+        padding: 0 15px 0 0;
+    }
+    .home-structure-select {
+        margin-bottom: 15px;
+    }
+    .home-structure-content {
+        border: 1px solid #202020;
+        padding: 20px 15px;
+    }
+    .home-structure-section {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .florence-section {
+        padding-bottom: 0;
     }
 }
 
