@@ -5,7 +5,6 @@ $(window).on('load', function() {
 //===================// Loader End //=================== //
 $(document).ready(function() {
 
-
     //===================// Menu Open Start //=================== //
     $('.navbar-toggler').on('click', function() {
         $('body').toggleClass('menu-open');
@@ -163,5 +162,11 @@ $(document).ready(function() {
         lastScrollTop = st;
     }
     //================// Property Detail Slider End //=======================//
+    setTimeout(() => {
+        AOS.init({
+            once: true,
+        });
+    }, 500);
+
 
 });
