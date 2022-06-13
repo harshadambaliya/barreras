@@ -576,6 +576,7 @@ body {
     margin-top: 110px;
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 
 .p-buy-video-content {
@@ -1087,6 +1088,7 @@ body {
     padding: 50px;
     background-color: #FAFAFA;
     box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+    overflow: hidden;
 }
 
 .information-item .row {

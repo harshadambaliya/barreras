@@ -1,9 +1,30 @@
 //===================// Loader Start //=================== //
+var timeStart = Date.now();
+var timeUsed = 0;
+
 $(window).on('load', function() {
-    $('body').addClass('site-loaded');
+
+
+    timeUsed = Date.now() - timeStart;
+    isLoaded = true;
+
+    console.log(timeUsed);
+    console.log(isLoaded);
+    if (timeUsed > 2500) {
+        $('body').addClass('site-loaded');
+        // $("body").addClass('loaddone');
+    }
+
 });
 //===================// Loader End //=================== //
 $(document).ready(function() {
+
+
+    setTimeout(function() {
+        if (isLoaded == true) {
+            $('body').addClass('site-loaded');
+        }
+    }, 2500);
 
     //===================// Menu Open Start //=================== //
     $('.navbar-toggler').on('click', function() {
@@ -94,31 +115,7 @@ $(document).ready(function() {
         ]
     });
 
-    //================// Property Detail Slider End //=======================//
-    if ($('.form-select').length > 0) {
-        var $disabledResults = $(".form-select");
-        $disabledResults.select2();
-        $('select').select2({
-            minimumResultsForSearch: -1
-        });
-    }
 
-    var $sliderValue = $(".range-slider[type=range]").val(),
-        $sliderCounterContainer = $(".slider-counter-container"),
-        $sliderCounter = $('.slider-counter'),
-        $rangeSlider = $(".range-slider");
-
-    // set value initially
-    $sliderCounterContainer.append('/' + $rangeSlider.attr("max"))
-    $sliderCounter.html($sliderValue)
-
-    // update value on scrub
-    $rangeSlider.on("input", function() {
-        $sliderValue = $(this).val();
-        $sliderCounter.html($sliderValue)
-    });
-
-    //================// Property Detail Slider Start //=======================//
     // Hide Header on on scroll down
     var didScroll;
     var lastScrollTop = 0;
@@ -162,11 +159,37 @@ $(document).ready(function() {
         lastScrollTop = st;
     }
     //================// Property Detail Slider End //=======================//
-    setTimeout(() => {
+    setTimeout(function() {
         AOS.init({
             once: true,
         });
-    }, 500);
+    }, 2200);
 
+
+    //================// Property Detail Slider End //=======================//
+    if ($('.form-select').length > 0) {
+        var $disabledResults = $(".form-select");
+        $disabledResults.select2();
+        $('select').select2({
+            minimumResultsForSearch: -1
+        });
+    }
+
+    var $sliderValue = $(".range-slider[type=range]").val(),
+        $sliderCounterContainer = $(".slider-counter-container"),
+        $sliderCounter = $('.slider-counter'),
+        $rangeSlider = $(".range-slider");
+
+    // set value initially
+    $sliderCounterContainer.append('/' + $rangeSlider.attr("max"))
+    $sliderCounter.html($sliderValue)
+
+    // update value on scrub
+    $rangeSlider.on("input", function() {
+        $sliderValue = $(this).val();
+        $sliderCounter.html($sliderValue)
+    });
+
+    //================// Property Detail Slider Start //=======================//
 
 });
